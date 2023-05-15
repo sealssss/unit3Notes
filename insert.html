@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div>
+    <div class="container">
+        <div class="content">
+            <div class="row">
+            </div>
+            <label for="first">First Name</label>
+            <input type="text" id="first" name="first_name" placeholder="First">
+<div>
+            <label for="last">Last Name</label>
+            <input type="text" id="last" name="last_name" placeholder="Last">
+            <button name ="Say Hello">Say Hello</button>
+            <p class="hidden"></p>
+        </div>
+    </div>
+    <script>
+
+        const firstName = document.getElementById('first');
+        const lastName = document.getElementById('last');
+        const full = document.querySelector('p');
+        
+        firstName.addEventListener('change', function (e) {
+            let first = firstName.value;
+            let last = lastName.value;
+            let fullName = `Hello ${first} ${last}!`;
+            full.textcontent = fullName;
+        });
+
+        lastName.addEventListener('change', function (e) {
+            let first = firstName.value;
+            let last = lastName.value;
+            let fullName = `Hello ${first} ${last}!`;
+            full.textcontent = fullName;
+        });
+        
+        clearButton.addEventListener('click', function (e) {
+            firstName.value = "";
+            lastName.value = "";
+            full.textcontent = "";
+        })
+    </script>
+</body>
+</html>
