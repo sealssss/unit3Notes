@@ -5,6 +5,59 @@
     <title>Title</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<div class="container">
+    <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Vel orci porta non pulvinar neque. Cursus risus at ultrices mi tempus imperdiet nulla. Odio euismod lacinia at quis risus sed vulputate odio ut.
+            Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque convallis. Ut sem nulla pharetra diam sit amet. Enim nec dui nunc mattis enim. \
+            Sit amet luctus venenatis lectus magna fringilla urna. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Amet mauris commodo quis
+            imperdiet massa tincidunt nunc pulvinar sapien.</p>
+        <div class="row">
+            <h3>Background</h3>
+            <button id="1">RED</button>
+            <button id="2">GREEN</button>
+            <button id="3">BLUE</button>
+        </div>
+        <div class="row">
+            <h3>Text</h3>
+            <button id="4">PINK</button>
+            <button id="5">TEAL</button>
+            <button id="6">PURPLE</button>
+        </div>
+        <button id="clear">CLEAR</button>
+    </div>
+</div>
+<script>
+    const content = document.querySelector('.content');
+    const red = document.getElementById('1');
+    const green = document.getElementById('2');
+    const blue = document.getElementById('3');
+
+    const pink = document.getElementById('4');
+    const teal = document.getElementById('5');
+    const purple = document.getElementById('6');
+
+    const clearButton = document.getElementById('clear');
+
+    red.addEventListener('click', function (e) {
+        content.classList.add('red');
+    });
+    green.addEventListener('click', function (e) {
+        content.classList.add('green')
+    });
+    blue.addEventListener('click', function (e) {
+        content.classList.add('blue');
+    });
+    pink.addEventListener('click', function (e) {
+        content.classList.add('pink');
+    });
+    teal.addEventListener('click', function (e) {
+        content.classList.add('teal');
+    });
+    purple.addEventListener('click', function (e) {
+        content.classList.add('purple')
+    });
+</script>
 <style>
     .red{
         background-color: red;
@@ -25,86 +78,6 @@
         color: purple;
     }
 </style>
-<body>
-<div class="container">
-    <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Diam donec adipiscing tristique risus nec feugiat in. Fermentum odio eu feugiat pretium nibh ipsum consequat nisl vel.
-            Augue lacus viverra vitae congue eu consequat ac. Tellus pellentesque eu tincidunt tortor aliquam nulla.
-            Leo duis ut diam quam nulla porttitor massa id. Rhoncus urna neque viverra justo nec. Eu scelerisque felis imperdiet proin fermentum leo.
-            Etiam erat velit scelerisque in dictum non consectetur. Dictum non consectetur a erat nam. Mi quis hendrerit dolor magna eget est lorem.
-            Senectus et netus et malesuada fames ac turpis. Diam vulputate ut pharetra sit amet aliquam id diam. Feugiat vivamus at augue eget arcu.
-            Consequat semper viverra nam libero. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus.
-            Nibh nisl condimentum id venenatis a.
-            Integer feugiat scelerisque varius morbi enim nunc faucibus a.
-            Sed blandit libero volutpat sed cras ornare arcu dui.</p>
-        <div class="row">
-            <h3>Background</h3>
-            <button id="1">RED</button>
-            <button id="2">GREEN</button>
-            <button id="3">BLUE</button>
-        </div>
-        <div class="row">
-             <h3>Text</h3>
-        <button id="4">PINK</button>
-        <button id="5">TEAL</button>
-        <button id="6">PURPLE</button>
-    </div>
-    <button id="clear">CLEAR</button>
-        <script>
-            const content = document.queryCommandEnabled('.content');
-            const red = document.getElementById('1');
-            const green = document.getElementById('2');
-            const blue = document.getElementById('3');
-
-            red.addEventListener('click', function(e){
-                RemoveBGColor();
-                content.classList.add('red')
-            });
-
-            green.addEventListener('click', function(e){
-                content.classList.add('green')
-            });
-
-            blue.addEventListener('click', function(e){
-                RemoveBGColor();
-                content.classList.add('blue')
-            });
-
-            pink.addEventListener('click', function(e){
-                removeTextColor();
-                content.classList.add('pink')
-            });
-
-            teal.addEventListener('click', function(e){
-                removeTextColor();
-                content.classList.add('teal')
-            });
-
-            purple.addEventListener('click', function(e){
-                removeTextColor();
-                RemoveBGColor;
-                content.classList.add('purple')
-            });
-            const pink = document.getElementById('4');
-            const teal = document.getElementById('5');
-            const purple = document.getElementById('6');
-
-            const clearButton = document.getElementById('clear');
-            removeTextColor();
-            RemoveBGColor();
-
-            function RemoveBGColor() {
-                content.classList.remove('red');
-                content.classList.remove('green');
-                content.classList.remove('blue');
-            }
-            function removeTextColor(){
-                content.classList.remove('pink');
-                content.classList.remove('teal');
-                content.classList.remove('purple');
-            }
-        </script>
 </div>
 </body>
 </html>
