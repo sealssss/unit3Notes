@@ -11,7 +11,7 @@
         <h3>5-function calculator</h3>
         <div class="row">
             <div>
-                <label for="a">A</label>
+                <label for="a">Problem 1</label>
                 <input type="text" id="a" name="A">
             </div>
         </div>
@@ -21,7 +21,7 @@
     <div class="content">
         <div class="row">
             <div>
-                <label for="b">B</label>
+                <label for="b">Problem 2</label>
                 <input type="text" id="b" name="B">
             </div>
         </div>
@@ -70,11 +70,22 @@
         let sideC = +c.value;
         
         if (checkYourAnswer(sideA, sideB, sideC)){
-            ans.textContent = '3 + 7 = 10';
+            ans.textContent = 'Your answer is correct';
             return;
         }
-        ans.textContent = '3 + 7 = 10';
-    })
+        ans.textContent = 'Your correct';
+    });
+    clearButton.addEventListener('click', function (e) {
+        let sideA = +a.value;
+        let sideB = +b.value;
+        let sideC = +c.value;
+
+        if (checkYourAnswer(sideA, sideB, sideC)) {
+            ans.textContent = 'clear';
+            return;
+        }
+        ans.textContent = ''
+    });
 </script>
 </body>
 </html>
