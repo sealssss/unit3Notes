@@ -52,6 +52,7 @@
     const ans = document.querySelector('p');
     const calculateButton = document.getElementById('calc');
     const clearButton = document.getElementById('clear');
+    const add = document.getElementById('+');
     
     function checkYourAnswer(num1, num2, num3) {
         let sideAB = (num1 + num2) > num3;
@@ -70,10 +71,10 @@
         let sideC = +c.value;
         
         if (checkYourAnswer(sideA, sideB, sideC)){
-            ans.textContent = 'Your answer is correct';
+            ans.textContent = 'Your correct';
             return;
         }
-        ans.textContent = 'Your correct';
+        ans.textContent = '5 + 5 = 10';
     });
     clearButton.addEventListener('click', function (e) {
         let sideA = +a.value;
@@ -85,6 +86,16 @@
             return;
         }
         ans.textContent = ''
+    });
+    add.addEventListener('click', function (e) {
+        let sideA = +a.value;
+        let sideB = +b.value;
+        let sideC = +c.value;
+        if (checkYourAnswer(sideA, sideB, sideC)) {
+            ans.textContent = '+';
+            return;
+        }
+        ans.textContent = '+'
     });
 </script>
 </body>
