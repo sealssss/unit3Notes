@@ -40,23 +40,44 @@
     const clearButton = document.getElementById('clear');
 
     red.addEventListener('click', function (e) {
+        removeBGColor();
         content.classList.add('red');
     });
     green.addEventListener('click', function (e) {
+        removeBGColor();
         content.classList.add('green')
     });
     blue.addEventListener('click', function (e) {
+        removeBGColor();
         content.classList.add('blue');
     });
     pink.addEventListener('click', function (e) {
+        removeTextColor();
         content.classList.add('pink');
     });
     teal.addEventListener('click', function (e) {
+        removeTextColor();
         content.classList.add('teal');
     });
     purple.addEventListener('click', function (e) {
+        removeTextColor();
         content.classList.add('purple')
     });
+    clearButton.addEventListener('click', function (e) {
+        removeBGColor();
+        removeTextColor();
+    });
+    function removeBGColor() {
+        content.classList.remove('red');
+        content.classList.remove('green');
+        content.classList.remove('blue');
+    }
+
+    function removeTextColor() {
+        content.classList.remove('pink');
+        content.classList.remove('teal');
+        content.classList.remove('purple');
+    }
 </script>
 <style>
     .red{
